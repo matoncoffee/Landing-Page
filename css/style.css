@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Junge&display=swap');
+
+:root{
+    --jua-regular: "Jua", sans-serif;
+    --junge-regular: "Junge", cursive;
+
+    --primary-color: #FBFFC0;
+    --secondary-color: #2B1B17;
+
+    --h4-largedv: 60px;
+    --h4-mediumdv: 40px;
+    --p-largedv: 30px;
+    --p-mediumdv: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+p {
+    width: 400px;
+    margin: auto;
+
+    
+    font-size: var(--p-largedv);
+    font-family: var(--junge-regular);
+    line-height: 50px;
+    text-align: left;
+    
+}
+
+h4{
+    font-size: var(--h4-largedv);
+    font-family: var(--jua-regular);
+    color: var(--secondary-color);
+}
+
+.header-image{
+    width: 100%;
+    height: 187px;
+    position: relative;
+    z-index: -1;
+}
+
+.header-image img{
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/coffee-machine-making-perfect-cup-coffee.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.header-image__logo{
+    position: absolute;
+    bottom: 32px;
+    left: 29px;
+
+    font-size: 40px;
+    font-family: var(--junge-regular);
+    color: var(--primary-color);
+}
+
+.hero{
+    width: 100vw;
+    height: calc(100vh - 187px);
+    
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-content, .hero-contact {
+    width: 50%;
+    height: 70%;
+
+    text-align: center;
+}
+
+.hero-content h4{
+    padding-bottom: 15px;
+}
+
+.hero-contact h4{
+    padding-bottom: 100px;
+}
+
+.hero-contact__form {
+    display: inline-block;
+    height: 80%;
+    
+}
+
+.hero-contact__form-name, .hero-contact__form-email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 200,
+  'opsz' 24
+}
+
+.hero-contact__form-name input, .hero-contact__form-email input{
+    width: 300px;
+    height: 40px;
+
+    border: 2px solid rgb(13,9,7);
+
+    text-transform: uppercase;
+    font-size: var(--p-mediumdv);
+    font-family: var(--jua-regular);
+    
+    padding-left: 15px;
+}
+
+.hero-contact input::placeholder {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+input:hover, button:hover{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.hero-contact button {
+    width: 30%;
+    height: 40px;
+
+    background: var(--secondary-color);
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    font-family: var(--jua-regular);
+    
+}
+
+.hero-contact button a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: var(--p-mediumdv);
+}
+
+
+@media screen and (max-width: 770px) {
+    h4{
+        font-size: var(--h4-mediumdv);
+    }
+    p{
+        width: 90%;
+
+        font-size: var(--p-mediumdv);
+        line-height: 32px;
+    }
+    .header-image__logo{
+        bottom: 10px;
+        left: 10px;
+        font-size: var(--p-mediumdv);
+    }
+    .hero {
+        height: calc(100vh - 187px);
+        flex-direction: column;
+    }
+    .hero-content, .hero-contact{
+        height: 40%;
+        width: 80%;
+    }
+    .hero-contact h4{
+        padding-bottom: 15px;
+    }
+    .hero-contact__form-name input, .hero-contact__form-email input{
+        width: 80%;
+    }
+
+}
